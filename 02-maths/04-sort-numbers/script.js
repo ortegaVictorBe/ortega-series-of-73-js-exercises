@@ -14,18 +14,17 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", function() {        
-        // your code here
-        let strNumbers=document.getElementById("numbers").value;
+        
         let resultant="";        
 
         //converting the string to array
-        secNumbers= strNumbers.split(",");           
+        secNumbers= document.getElementById("numbers").value.split(",");           
         
         //Ordening        
         secNumbers.sort(function(a, b) {
             return a - b;
           });        
-
+        //Preparing the output
         secNumbers.forEach( function(value) {
             resultant+=(value +" <br/>");            
         });
