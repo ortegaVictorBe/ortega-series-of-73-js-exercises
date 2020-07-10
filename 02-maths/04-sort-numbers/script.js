@@ -24,20 +24,15 @@
         //Ordening        
         secNumbers.sort(function(a, b) {
             return a - b;
-          });
+          });        
 
-          alert(secNumbers);        
-          resultant = parseFunction(resultant);        
-        
+        secNumbers.forEach( function(value) {
+            resultant+=(value +" <br/>");            
+        });
+
         document.getElementById("result").innerHTML="<br/> *** RESULT *** <br/>"+ resultant +"<br/>";
-
     });
 
 })();
-function parseFunction(result) {
-    for (i = 0; i < secNumbers.length; i++) {
-        result = result + secNumbers[i] + "<br/>";        
-    }
-    return result;
-}
+
 
