@@ -18,32 +18,31 @@
         // perform the operation
         let result = "";
 
-        if(isNaN(operandA.value)||isNaN(operandB.value))
-          { 
-            document.getElementById("result").textContent="Enter Valid operands"
-          }
-          else {
-                switch (operation) {
-                    case 'addition':
-                        result = parseFloat(operandA.value) + parseFloat(operandB.value);
-                        break;
-                    case 'substraction':
-                        result = parseFloat(operandA.value) - parseFloat(operandB.value);
-                        break;
-                    case 'multiplication':
-                        result = parseFloat(operandA.value) * parseFloat(operandB.value);
-                        break;
-                    case 'division':
-                        if(operandB.value == "0"){
-                            result="Division by 0";            
-                        }else{
-                            result = parseFloat(operandA.value) / parseFloat(operandB.value);                                
-                        }                  
-                        break;
-                    default:    
-                }
-                document.getElementById("result").textContent=result;
-               }
+        if (isNaN(operandA.value) || isNaN(operandB.value)) {
+            document.getElementById("result").value = "Enter Valid operands"
+        }
+        else {
+            switch (operation) {
+                case 'addition':
+                    result = parseFloat(operandA.value) + parseFloat(operandB.value);
+                    break;
+                case 'substraction':
+                    result = parseFloat(operandA.value) - parseFloat(operandB.value);
+                    break;
+                case 'multiplication':
+                    result = parseFloat(operandA.value) * parseFloat(operandB.value);
+                    break;
+                case 'division':
+                    if (operandB.value == "0") {
+                        result = "Division by 0";
+                    } else {
+                        result = parseFloat(operandA.value) / parseFloat(operandB.value);
+                    }
+                    break;
+                default:
+            }
+            document.getElementById("result").value = result;
+        }
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>
