@@ -2,34 +2,37 @@
  *
  * /02-maths/04-sort-numbers/script.js - 2.4: classer des nombres
  *
- * coded by leny@BeCode
- * started at 26/10/2018
+ * coded by ortegaVictorBe@BeCode
+ * started at 10/07/2020
  */
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     // to get the value of an input: document.getElementById("element-id").value
 
-    document.getElementById("run").addEventListener("click", function() {        
-        
-        let resultant="";        
+    document.getElementById("run").addEventListener("click", function () {
+
+        let resultant = "";
 
         //converting the string to array
-        secNumbers= document.getElementById("numbers").value.split(",");           
-        
+        secNumbers = document.getElementById("numbers").value.split(",");
+
         //Ordening        
-        secNumbers.sort(function(a, b) {
+        secNumbers.sort(function (a, b) {
             return a - b;
-          });        
-        //Preparing the output
-        secNumbers.forEach( function(value) {
-            resultant+=(value +" <br/>");            
         });
 
-        document.getElementById("result").innerHTML="<br/> *** RESULT *** <br/>"+ resultant +"<br/>";
+        //Preparing the output
+        let size = secNumbers.lenght;
+
+        secNumbers.forEach(function (value, index) {
+            resultant += value;
+            if (index < size - 1) { resultant += ","; }
+        });
+        document.getElementById("result").value = resultant;
     });
 
 })();
