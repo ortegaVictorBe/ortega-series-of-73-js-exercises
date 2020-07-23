@@ -1,0 +1,34 @@
+/* becode/javascript
+ *
+ * /06-objects/03-keys-values/script.js - 6.3: clés & valeurs
+ *
+ * coded by ortegaVictorBE@BeCode
+ * started at 15/07/2020
+ */
+
+// NOTE: don't focus on the existing code structure for now.
+// You will have time to focus on it later.
+
+(() => {
+    const person = {
+        lastname: "Delnatte",
+        firstname: "Pierre-Antoine",
+        nickname: "Leny",
+        birthDate: "08-05-1985",
+        city: "Liège",
+        status: "married",
+    };
+
+    document.getElementById("run").addEventListener("click", () => {
+
+        //Printing Keys
+        console.log("  *** Keys  ***   ");
+        Object.keys(person).forEach(myKey => { console.log(myKey); })
+
+        //Printing Values
+        console.log(" *** Values ***  ");
+        Object.values(person).forEach(myValue => { console.log(myValue); })
+    })
+
+
+})();

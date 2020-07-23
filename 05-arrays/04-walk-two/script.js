@@ -1,0 +1,35 @@
+/* becode/javascript
+ *
+ * /05-arrays/04-walk-two/script.js - 5.4: array traversal (2)
+ *
+ * coded by ortegaVictorBe@BeCode
+ * started at 15/07/2020
+ */
+
+// NOTE: don't focus on the existing code structure for now.
+// You will have time to focus on it later.
+
+(function () {
+
+    var fruits = [
+        "apple",
+        "peer",
+        "strawberry",
+        "tomato",
+        "kiwi",
+        "banana",
+        "orange",
+        "mandarine",
+        "durian",
+        "peach",
+        "grape",
+        "cherry",
+    ];
+
+    document.getElementById("run").addEventListener("click", function () {
+
+        fruits.forEach(value => console.log(value));
+
+    })
+
+})();
