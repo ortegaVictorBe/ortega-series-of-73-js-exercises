@@ -2,13 +2,24 @@
  *
  * /10-asynchronous/09-async-handling-errors/script.js - 10.9: gestion d'erreur (async/await)
  *
- * coded by leny@BeCode
- * started at 09/05/2019
+ * coded by oretgaVictorBE@BeCode
+ * started at 15/07/2020
  */
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").onclick = () => {
+        const myAsyncPerson = async () => {
+
+            return await window.lib.getPersons();
+        }
+
+        myAsyncPerson().then(myPerson => {
+            console.table(myPerson);
+        }).catch(error => {
+            console.error(error);
+        });
+    }
 })();

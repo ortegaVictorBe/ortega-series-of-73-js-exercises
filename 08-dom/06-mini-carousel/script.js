@@ -12,11 +12,11 @@
 (function () {
 
     var gallery = [
-        "../../_shared/img/bell.svg",
-        "../../_shared/img/clock.svg",
-        "../../_shared/img/compass.svg",
-        "../../_shared/img/lemon.svg",
-        "../../_shared/img/map.svg",
+        "../../shared/img/bell.svg",
+        "../../shared/img/clock.svg",
+        "../../shared/img/compass.svg",
+        "../../shared/img/lemon.svg",
+        "../../shared/img/map.svg",
     ];
 
     let myImg = document.getElementsByTagName("img")[0];
