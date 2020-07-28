@@ -17,12 +17,16 @@
     var right = false;
 
     alert("Welcome Friend, this is a fun game /Instructions: Try to guess the hidden number!!")
-    alert("Hidden Number:" + hiddenNumber)
+    // alert("Hidden Number: " + hiddenNumber)
     while (!right) {
         alert(`This is your attempt #${tries}, go for it!! `)
         let answer = prompt("Shooot !!, do your best..");
 
-        if (!answer.toString().isNaN) {
+        if (isNaN(answer)) {
+            alert("Your shoot is not a number!");
+            tries++
+        }
+        else {
             if (parseInt(answer) == hiddenNumber) {
                 right = true;
                 document.getElementById("result").innerHTML = "<strong>That's Right.. Good Job!!, Indeed the number is: " + hiddenNumber + "</strong>";
@@ -34,11 +38,6 @@
                 tries++
             }
         }
-        else {
-            alert("Your shoot is not a number!");
-            tries++
-        }
-
         if (guessNumber == (tries - 1)) {
             alert("That was your last shoot.. Maybe next time.. Bye");
             right = true;
