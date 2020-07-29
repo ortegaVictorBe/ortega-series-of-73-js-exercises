@@ -2,8 +2,8 @@
  *
  * /09-fetch/03-details/script.js - 11.3: details
  *
- * coded by leny@BeCode
- * started at 12/05/2019
+ * coded by ortegaVictorBe@BeCode
+ * started at 27/07/2020
  */
 
 // NOTE: don't focus on the existing code structure for now.
